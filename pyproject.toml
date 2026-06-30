@@ -8,13 +8,12 @@ version = "0.2.0"
 description = "Convert numbers to Azerbaijani words"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "MIT"
 authors = [{ name = "Ziya Mammadov", email = "ziyamm08@gmail.com" }]
 keywords = ["azerbaijani", "numbers", "num2words", "converter"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Natural Language :: Azerbaijani",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
