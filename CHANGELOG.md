@@ -4,7 +4,7 @@ All notable changes to `aznum2words` will be documented in this file.
 
 ## [Unreleased]
 
-## [0.2.0] - 2026-06-30
+## [1.0.0] - 2026-06-30
 - Replaced corrupted Azerbaijani text with proper Unicode spelling.
 - Reworked conversion to use `Decimal` parsing instead of float-only parsing.
 - Fixed Azerbaijani forms for `yüz`, `min`, large numbers, and decimal fractions.
