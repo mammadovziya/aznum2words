@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aznum2words"
+version = "0.2.0"
+description = "Convert numbers to Azerbaijani words"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ziya Mammadov", email = "ziyamm08@gmail.com" }]
+keywords = ["azerbaijani", "numbers", "num2words", "converter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Azerbaijani",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/ziyam/aznum2words"
+Issues = "https://github.com/ziyam/aznum2words/issues"
+
+[tool.setuptools.packages.find]
+include = ["aznum2words*"]
+
+[tool.setuptools.package-data]
+aznum2words = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

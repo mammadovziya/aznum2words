@@ -1,17 +1,12 @@
-# AzNum2Words
+# aznum2words
 
-- - -
-[![GitHub Stars](https://img.shields.io/github/stars/zmmmdf/aznum2words.svg?style=social&label=Stars&style=plastic)](https://github.com/zmmmdf/aznum2words/stargazers)
-[![Lisenziya](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
-[![Switch to English](https://img.shields.io/badge/lang-en-brightgreen)](./README.md)
+Tam və kəsr ədədləri Azərbaycan dilində sözlə ifadə edən kiçik Python
+kitabxanası.
 
-## Məqsəd
-
-AzNum2Words ədədləri Azərbaycan dilində sözlə ifadə etmə məqsədini daşıyır və bu, maliyyə əməliyyatları, hüquqi sənədlər və statistik analizlər kimi müxtəlif ehtiyacları qarşılayır.
+[![Lisenziya: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![Dil: English](https://img.shields.io/badge/lang-en-brightgreen.svg)](./README.md)
 
 ## Quraşdırma
-
-AzNum2Words kitabxanasını pip vasitəsilə quraşdıra bilərsiniz:
 
 ```bash
 pip install aznum2words
@@ -20,39 +15,31 @@ pip install aznum2words
 ## İstifadə
 
 ```python
-from aznum2words import AzerbaijaniNumberConverter
+from decimal import Decimal
+
+from aznum2words import AzerbaijaniNumberConverter, convert, num2words
 
 converter = AzerbaijaniNumberConverter()
-print(converter.convert(123456789))  # nəticə: bir yüz iyirmi üç milyon dörd yüz əlli altı min yeddi yüz səkkiz doqquz
+
+converter.convert(123456789)
+# "yüz iyirmi üç milyon dörd yüz əlli altı min yeddi yüz səksən doqquz"
+
+convert("1,25")
+# "bir tam yüzdə iyirmi beş"
+
+num2words(Decimal("0.001"))
+# "sıfır tam mində bir"
 ```
 
-## Testlər
+Sətir kimi verilən ədədlərdə onluq ayırıcı üçün `.` və ya `,` istifadə etmək
+olar. `Decimal` dəyərlərində yazılmış kəsr dəqiqliyi saxlanılır; məsələn,
+`Decimal("1.20")` yüzdəlik kimi oxunur.
 
-AzNum2Words kitabxanası etibarlılığını və dəqiqliyini təmin etmək üçün geniş test əhatəsinə malikdir. Testləri icra etmək üçün pytest istifadə edə bilərsiniz:
+## İnkişaf
 
 ```bash
-pip install pytest
-pytest
+python -m pip install -e ".[dev]"
+python -m pytest
 ```
 
-## Layihəyə Dəstək
-
-AzNum2Words layihəsinə dəstək olmaq və töhfə vermək xoş qarşılanır! Töfhə vermək üçün aşağıdakı təlimatları izləyin:
-
-1. Reponu fork edin.
-2. Öz xüsusiyyətiniz üçün yeni bir branch yaradın (`git checkout -b feature/my-feature`).
-3. Dəyişikliklərinizi commit edin (`git commit -am 'Yeni xüsusiyyət əlavə olundu'`).
-4. Dəyişikliklərinizi branch-a push edin (`git push origin feature/my-feature`).
-5. Dəyişikliklərinizi izah edən bir pull request yaradın.
-
-## Töhfə verənlər
-
-Bu layihəyə aşağıdakı şəxslər töhfə veriblər:
-
-<!-- Contributors list -->
-<a href="https://github.com/zmmmdf/aznum2words/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zmmmdf/aznum2words" />
-</a>
-
-<!--Made with [contrib.rocks](https://contrib.rocks). -->
-<!-- Contributors list -->
+Kitabxananın işləməsi üçün əlavə asılılıq yoxdur və Python 3.9+ dəstəklənir.
