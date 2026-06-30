@@ -5,15 +5,30 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aznum2words"
 version = "1.0.0"
-description = "Convert numbers to Azerbaijani words"
+description = "Azerbaijani number-to-words converter for Python"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
 authors = [{ name = "Ziya Mammadov", email = "ziyamm08@gmail.com" }]
-keywords = ["azerbaijani", "numbers", "num2words", "converter"]
+keywords = [
+    "azerbaijani",
+    "azerbaijani-language",
+    "azerbaijan",
+    "azeri",
+    "decimal-to-words",
+    "i18n",
+    "integer-to-words",
+    "localization",
+    "num2words",
+    "number-converter",
+    "number-to-words",
+    "numbers-to-words",
+    "python-library",
+]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.9",
@@ -22,6 +37,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Linguistic",
     "Typing :: Typed",
 ]
 dependencies = []
@@ -30,8 +46,10 @@ dependencies = []
 dev = ["pytest>=8"]
 
 [project.urls]
-Homepage = "https://github.com/ziyam/aznum2words"
-Issues = "https://github.com/ziyam/aznum2words/issues"
+Homepage = "https://github.com/mammadovziya/aznum2words"
+Repository = "https://github.com/mammadovziya/aznum2words"
+Issues = "https://github.com/mammadovziya/aznum2words/issues"
+Changelog = "https://github.com/mammadovziya/aznum2words/blob/master/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 include = ["aznum2words*"]
