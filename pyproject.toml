@@ -14,7 +14,6 @@ keywords = ["azerbaijani", "numbers", "num2words", "converter"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "Natural Language :: Azerbaijani",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.9",
